@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARAOKE VOTES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="screen" class="screen">
+
+    <!-- ============ TELA 1: CADASTRO ============ -->
+    <section id="view-register" class="view active">
+      <div class="container narrow">
+        <header class="title-block">
+          <div class="title-marquee"><span class="marquee-star">★</span> KARAOKE VOTES <span class="marquee-star">★</span></div>
+          <p>CADASTRE OS CANTORES PARA COMEÇAR A FESTA</p>
+        </header>
+
+        <form id="register-form" class="card">
+          <input id="input-name" type="text" placeholder="NOME DO CANTOR" maxlength="40" required autocomplete="off">
+          <button type="submit" class="btn primary">ADICIONAR CANTOR</button>
+        </form>
+
+        <div id="singer-list" class="card list"></div>
+
+        <div class="card round-box">
+          <span class="small-label">QUANTAS RODADAS?</span>
+          <div class="round-stepper">
+            <button type="button" id="round-minus" class="btn ghost small">-</button>
+            <span id="round-value" class="round-value">3</span>
+            <button type="button" id="round-plus" class="btn ghost small">+</button>
+          </div>
+          <p class="round-hint">1 RODADA = TODOS CANTAM 1 VEZ</p>
+        </div>
+
+        <button id="btn-start" class="btn cta" disabled>COMEÇAR A FESTA</button>
+      </div>
+    </section>
+
+    <!-- ============ TELA 2: PAINEL ============ -->
+    <section id="view-panel" class="view">
+      <div class="container">
+
+        <div id="round-indicator" class="round-indicator">RODADA 1 DE 3</div>
+
+        <!-- Modo de espera: girar a roleta -->
+        <div id="sing-selector" class="card center-block">
+          <h2 class="h2-marquee">QUEM VAI CANTAR AGORA?</h2>
+          <div class="wheel-wrap">
+            <div class="wheel-pointer"></div>
+            <div class="wheel-bulbs"></div>
+            <div class="wheel" id="wheel">
+              <svg id="wheel-svg" viewBox="0 0 320 320"></svg>
+            </div>
+            <div class="wheel-hub">★</div>
+          </div>
+          <button id="btn-spin" class="btn spin">GIRAR ROLETA</button>
+          <div id="roleta-remaining" class="roleta-remaining"></div>
+        </div>
+
+        <!-- Modo de cantoria: votação -->
+        <div id="sing-mode" class="hidden">
+          <div class="performer-banner">
+            <span class="small-label">CANTOR DA VEZ</span>
+            <h2 id="performer-name"></h2>
+          </div>
+
+          <div id="vote-progress" class="progress-wrap">
+            <div class="progress-track">
+              <div id="vote-progress-bar" class="progress-bar"></div>
+            </div>
+            <span id="vote-progress-text">0 DE 0 VOTOS</span>
+          </div>
+
+          <div class="card vote-card">
+            <label for="voter-select" class="small-label">QUEM ESTÁ VOTANDO?</label>
+            <select id="voter-select"></select>
+
+            <div id="note-picker" class="note-picker"></div>
+
+            <button id="btn-submit-vote" class="btn primary">REGISTRAR VOTO</button>
+
+            <div class="voters-status" id="voters-status"></div>
+            <button id="btn-finish-vote" class="btn primary" disabled>CONCLUIR VOTAÇÃO</button>
+          </div>
+        </div>
+
+        <div class="panel-actions">
+          <button id="btn-back-register" class="btn ghost">+ CANTORES</button>
+          <button id="btn-end-party" class="btn danger">ENCERRAR FESTA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TELA 3: RESULTADO ============ -->
+    <section id="view-results" class="view">
+      <div class="container">
+        <header class="title-block">
+          <div class="title-marquee"><span class="marquee-star">★</span> RESULTADO DA FESTA <span class="marquee-star">★</span></div>
+          <p>VAMOS VER QUEM LEVA O TROFÉU...</p>
+        </header>
+
+        <div id="results-list" class="results-list"></div>
+
+        <button id="btn-new-party" class="btn cta">NOVA FESTA</button>
+      </div>
+    </section>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
