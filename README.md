@@ -1,3 +1,4 @@
+![Capa do app](capa.png)
 # 🎤 KARAOKE VOTES
 
 > **O sistema de votação definitivo para a sua festa de karaokê.**
