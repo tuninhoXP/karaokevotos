@@ -23,15 +23,13 @@ Cadastre os cantores, gire a roleta e deixe a plateia votar! Um app 100% local, 
 ---
 
 ## 🚀 Como usar
-
-1. **Abra o `index.html`** no seu navegador (duplo clique funciona).
-2. **Cadastre os cantores** da festa (nome apenas — a música fica por conta do cantor 😎).
-3. Escolha a **quantidade de rodadas** com os botões `-` / `+`.
-4. Clique em **COMEÇAR A FESTA**.
-5. **GIRE A ROLETA** 🎰 e veja quem foi sorteado para cantar.
-6. Cada pessoa da plateia **dá sua nota de 1 a 10** no computador central.
-7. Ao concluir, a roleta gira de novo — **sem repetir quem já cantou** na rodada.
-8. Ao final de todas as rodadas, veja o **ranking** com as médias e as frases engraçadas. 🏆
+1. **Cadastre os cantores** da festa (nome apenas — a música fica por conta do cantor 😎).
+2. Escolha a **quantidade de rodadas** com os botões `-` / `+`.
+3. Clique em **COMEÇAR A FESTA**.
+4. **GIRE A ROLETA** 🎰 e veja quem foi sorteado para cantar.
+5. Cada pessoa da plateia **dá sua nota de 1 a 10** no computador central.
+6. Ao concluir, a roleta gira de novo — **sem repetir quem já cantou** na rodada.
+7. Ao final de todas as rodadas, veja o **ranking** com as médias e as frases engraçadas. 🏆
 
 > 💡 Dica: projete a tela na TV e use o navegador em **modo tela cheia** (F11) para o melhor efeito.
 
@@ -63,16 +61,6 @@ Cada média gera uma frase especial no resultado final:
 
 ---
 
-## 🛠️ Tecnologias
-
-- **HTML5** — estrutura
-- **CSS3** — tema arcade retrô (scanlines CRT, sombras duras, animações)
-- **JavaScript puro** — lógica, roleta em SVG, WebAudio para os sons
-- **localStorage** — persistência dos dados
-- **Zero dependências** — não usa nenhuma biblioteca externa
-
----
-
 ## 📁 Estrutura do projeto
 
 ```
@@ -91,7 +79,3 @@ karaokevotos/
 - 🎨 **Temas visuais alternativos** (cassino, feira, boombox)
 - 🔊 **Personalização dos sons** da roleta e da fanfarra
 - 🎵 Campo de **música** opcional por cantor
-
----
-
-Feito com 💜 para animar suas festas. **Boa cantoria!** 🎤✨
